@@ -1,11 +1,11 @@
 const getYieldForPlant = (plant) => plant.yield;
 
-const getYieldForCrop = (crops, factors) => {
-  const withoutFactor = crops.numCrops * crops.crop.yield;
+const getYieldForCrop = (plant, factors) => {
+  const withoutFactor = plant.numCrops * plant.crop.yield;
   if (!factors) {
     return withoutFactor;
   } else {
-    const envfactors = crops.crop.factors;
+    const envfactors = plant.crop.factors;
     let sunInfluece;
     let windInfluece;
 
